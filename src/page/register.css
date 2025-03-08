@@ -1,0 +1,92 @@
+.Main {
+    background-image: url('mountain-6815304_1280.jpg');
+    background-size: cover; /* Image pura cover karega */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; /* Full screen height */
+    width: 100%; /* Full width */
+}
+
+.Navcontainer{
+    display: flex;
+    justify-content: space-between;
+
+}
+.Navcontainer li{
+list-style: none;
+color: rgb(70, 31, 245);
+font-size: 1.7rem;
+font-weight: 900;
+font-family: cursive;
+margin: 25px 0px 0px 30px;
+
+}
+
+.mainregcontainer{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.registerForm {
+    /* margin-top: 4%; */
+    padding: 3.5% 6%;
+    background: rgba(0, 0, 0, 0.3); /* Transparent Black */
+    backdrop-filter: blur(10px); /* Blur Effect */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Smooth corners */
+}
+.regheading{
+    font-size: 2rem;
+    font-family: sans-serif;
+    color: white;
+}
+
+.registerForm label {
+    color: black;
+    font-family: 'Gill Sans', 'Gill Sans MT', Calibri, 'Trebuchet MS', sans-serif;
+    
+}
+
+
+.reginput{
+    width: 350px;
+    border-radius: 5px;
+    height: 35px;
+    outline: none;
+    border: none;
+    padding: 18px;
+    /* text-decoration: line-through; */
+    /* margin-top: 20px; */
+}
+input:focus {
+    border: 1px solid black;
+}
+.regbtn{
+    margin-top: -5%;
+    width: 55%;
+    height: 6vh;
+    color: black;
+    background-color: white;
+    border-radius: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    box-shadow: 4px 4px 10px rgba(0, 0, 0, 0.5);
+}
+@media (max-width: 480px) {
+    .Navcontainer{
+        display: flex;
+        justify-content: center;
+    
+    }
+    .registerForm {
+        margin-top: 8%;
+        
+    }
+    .reginput{
+width: 250px;
+height: 10px;
+    }
+}

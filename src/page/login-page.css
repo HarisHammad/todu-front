@@ -1,0 +1,10 @@
+.Main2 {
+    background-image: url('/assets/pexels-pixabay-219837.jpg');
+
+   
+    background-size: cover; /* Image pura cover karega */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; /* Full screen height */
+    width: 100%; /* Full width */
+}

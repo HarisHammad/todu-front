@@ -1,0 +1,76 @@
+/* Pura screen center + dark background */
+.mainadmin {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;  /* Screen ka pura height cover kare */
+    background-color: #181818; /* Dark mode background */
+    padding: 20px; /* Small devices ke liye padding */
+}
+
+/* Stylish Table */
+table {
+    width: 100%;
+    max-width: 700px;
+    border-collapse: collapse;
+    background: #222; /* Table ka dark background */
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(255, 255, 255, 0.1);
+}
+
+/* Table Header */
+thead {
+    background-color: #031522;
+    color: white;
+    text-align: left;
+}
+
+/* Table Header & Rows */
+th, td {
+    padding: 15px;
+    color: white;
+    text-align: center;
+}
+
+/* Rows Styling */
+tr {
+    border-bottom: 1px solid #333; /* Light border */
+}
+
+/* Last row ka border remove */
+tr:last-child {
+    border-bottom: none;
+}
+
+/* Hover Effect */
+tbody tr:hover {
+    background-color: #2a2a2a; /* Light hover */
+}
+
+/* Delete Button */
+
+.deletebtn:hover {
+    background: #c0392b;
+}
+
+/* ✅ Responsive Design */
+@media (max-width: 768px) {
+    .mainadmin {
+        padding: 10px; /* Mobile ke liye padding kam */
+    }
+    
+    table {
+        width: 100%; /* Full width on small screens */
+        font-size: 14px; /* Choti screen ke liye font size adjust */
+    }
+    
+    th, td {
+        padding: 10px; /* Mobile friendly spacing */
+    }
+    
+    .deletebtn {
+        padding: 6px 10px;
+        font-size: 12px; /* Choti screens ke liye button chhota */
+    }
+}

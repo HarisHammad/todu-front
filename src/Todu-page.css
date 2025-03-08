@@ -1,0 +1,170 @@
+.Main3 {
+    background-image: url('pexels-chaitaastic-1797113 (1).jpg');
+    background-size: cover; /* Image pura cover karega */
+    background-position: center; 
+    background-repeat: no-repeat; 
+    height: 100vh; /* Full screen height */
+    width: 100%; /* Full width */
+   
+}
+
+.todonav{
+    display:flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
+}
+.todonav li{
+    list-style: none;
+    color: red;
+    font-size: 1.5rem;
+    font-weight: 900;
+    font-family: cursive;
+    margin: 10px;
+}
+.todubtn {
+    margin: 10px;
+    display: flex;
+    gap: 10px;
+    flex-wrap: wrap;
+}
+.todubtn button{
+    margin: 5px;
+    border: none;
+    background-color: rgb(96, 96, 238); 
+    border-radius: 10px;
+    color: white;
+    width: 120px;
+    height: 35px;
+    cursor: pointer;
+}
+.todubtn button:hover{
+    background-color: blue;
+    transition: 0.3s all ease;
+}
+.maintoducontainer{
+    margin-top: 20px;
+    width: 100%;
+    display: flex;
+    justify-content: center;
+}
+.toduForm {
+    padding: 30px 50px;
+    background: rgba(0, 0, 0, 0.3); /* Transparent Black */
+    backdrop-filter: blur(10px); /* Blur Effect */
+    align-items: center;
+    justify-content: center;
+    border-radius: 10px; /* Smooth corners */
+    width: 90%;
+    max-width: 500px;
+}
+.toduForm form {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 10px; 
+    flex-wrap: nowrap; 
+}
+
+
+
+.taskbtn{
+    width: 17%;
+    height: 34px;
+    margin-left: 10px;
+    color: beige;
+    background-color: rgb(96, 96, 238); 
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    flex-shrink: 0;
+}
+.mainmaptask {
+    max-height: 350px; 
+    overflow-y: auto; 
+    overflow-x: hidden;
+    scrollbar-width: none; /* Firefox ke liye scrollbar hide karega */
+}
+
+/* Chrome, Safari, Edge ke liye */
+.mainmaptask::-webkit-scrollbar {
+    display: none; /* Scrollbar completely hide ho jayegi */
+}
+
+
+.maptask{
+    margin-top: 20px;
+    border: 2px solid black;
+    display: flex;
+    flex-wrap: wrap;
+    padding: 10px;
+    border-radius: 20px;
+    justify-content: space-between;
+    width: 90%;
+    max-width: 600px;
+}
+.maptask h3{
+    font-family: cursive;
+    font-weight: 300;
+    font-size: 1.2rem;
+}
+.donebtn{
+    width: 5%;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(12, 175, 12);
+    margin: 5px;
+}
+.deletebtn{
+    width: 70px;
+    height: 30px;
+    border-radius: 10px;
+    border: none;
+    color: white;
+    background-color: rgb(248, 38, 38);
+    margin: 5px;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .todonav {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+    }
+    .todonav li {
+        font-size: 1.2rem;
+    }
+    .todubtn {
+        justify-content: center;
+    }
+    .todubtn button {
+        width: 100px;
+        height: 30px;
+        font-size: 0.9rem;
+    }
+    .maintoducontainer {
+        flex-direction: column;
+        align-items: center;
+    }
+    .toduForm {
+        padding: 20px 30px;
+        width: 95%;
+    }
+    .maptask {
+        flex-direction: column;
+        align-items: center;
+        text-align: center;
+        width: 95%;
+    }
+    .maptask h3 {
+        font-size: 1rem;
+    }
+    .donebtn, .deletebtn {
+        width: 60px;
+        height: 25px;
+        font-size: 0.8rem;
+    }
+}
