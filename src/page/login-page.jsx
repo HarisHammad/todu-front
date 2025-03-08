@@ -30,7 +30,7 @@ const [data,setdata]= useState({
         async function handlesubmit (e){
             e.preventDefault();
           try {
-            const response = await fetch('https://mern-todu-list-61qi.vercel.app/api/login',{
+            const response = await fetch('https://todu-backend.vercel.app/api/login',{
                 method:'POST',
                 headers:{'Content-Type':'application/json'},
                 body:JSON.stringify(data),
