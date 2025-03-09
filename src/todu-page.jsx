@@ -50,7 +50,7 @@ export default function Todu(){
    
     try {
         console.log("Local Token:", localtoken);
-            const respons = await fetch(`https://todu-backend.vercel.app/api/users/${id}`,{
+            const respons = await fetch(`https://todu-backend-lwfp.vercel.app/api/users/${id}`,{
             method:'GET',
             headers:{Authorization:`Bearer${localtoken}`}})
             if(respons.ok){
@@ -76,7 +76,7 @@ export default function Todu(){
         const newTask = { tasks: data};
         settask(prevTasks => [...prevTasks, newTask]);
 try {
-        const respons = await fetch('https://todu-backend.vercel.app/api/task',{
+        const respons = await fetch('https://todu-backend-lwfp.vercel.app/api/task',{
             method:'POST',
             headers:{"Content-Type":"application/json"},
             body: JSON.stringify({tasks:data,id})})
@@ -102,7 +102,7 @@ try {
 
   async function deleteTask(taskid){
         try {
-            const response = await fetch(`https://todu-backend.vercel.app/api/usersDelete/${id}/${taskid}`,{
+            const response = await fetch(`https://todu-backend-lwfp.vercel.app/api/usersDelete/${id}/${taskid}`,{
                 method:'DELETE'
             })
             if(response.ok){
