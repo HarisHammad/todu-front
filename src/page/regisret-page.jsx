@@ -28,7 +28,7 @@ const [data,setdata]= useState({
   async function handleSubmit(e){
     e.preventDefault()
     try {
-        const respone = await fetch('https://mern-todu-list-l8d6.vercel.app/api/register',{
+        const respone = await fetch('https://todu-backend.vercel.app/api/register',{
             method:"POST",
             headers:{"Content-Type":"application/json"},
             body:JSON.stringify(data)

@@ -14,7 +14,7 @@ export default function Admin(){
     
     async function alldata(){
         try {
-        const response = await fetch("https://mern-todu-list-l8d6.vercel.app/api/admin",{
+        const response = await fetch("https://todu-backend.vercel.app/api/admin",{
             method:"GET",
         })
         if(response.ok){
@@ -32,7 +32,7 @@ export default function Admin(){
 
 async function deleteUser(id){
     try {
-        const response = await fetch(`https://mern-todu-list-l8d6.vercel.app/api/deleteUser/${id}`,{
+        const response = await fetch(`https://todu-backend.vercel.app/api/deleteUser/${id}`,{
             method:'DELETE'
         })
         if(response.ok){
