@@ -34,7 +34,7 @@ const getuserData=async()=>{
 const response = await fetch('https://mern-todu-list-l8d6.vercel.app/api/users',{
     method:"GET",
     headers:{Authorization:`Bearer${token}`},
-    mode:"no-cors"
+    
 })
 
 if(response.ok){
