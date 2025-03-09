@@ -31,7 +31,7 @@ let isLoggedin =!!token
 
 const getuserData=async()=>{
   try{
-const response = await fetch('https://mern-todu-list-l8d6.vercel.app/api/users',{
+const response = await fetch('https://todu-backend-lwfp.vercel.app/api/users',{
     method:"GET",
     headers:{Authorization:`Bearer${token}`},
     
