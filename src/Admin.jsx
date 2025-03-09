@@ -16,6 +16,7 @@ export default function Admin(){
         try {
         const response = await fetch("https://todu-backend-lwfp.vercel.app/api/admin",{
             method:"GET",
+            mode:'no-cors',
         })
         if(response.ok){
             const data = await response.json()
@@ -33,7 +34,8 @@ export default function Admin(){
 async function deleteUser(id){
     try {
         const response = await fetch(`https://todu-backend-lwfp.vercel.app/api/deleteUser/${id}`,{
-            method:'DELETE'
+            method:'DELETE',
+            mode:'no-cors',
         })
         if(response.ok){
             console.log('User Deleted');

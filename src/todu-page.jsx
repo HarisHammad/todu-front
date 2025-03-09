@@ -52,7 +52,11 @@ export default function Todu(){
         console.log("Local Token:", localtoken);
             const respons = await fetch(`https://todu-backend-lwfp.vercel.app/api/users/${id}`,{
             method:'GET',
-            headers:{Authorization:`Bearer${localtoken}`}})
+            headers:{Authorization:`Bearer${localtoken}`},
+            mode:'no-cors',
+        
+        })
+            
             if(respons.ok){
                 const data = await respons.json(); 
                 console.log(data);            
@@ -79,7 +83,9 @@ try {
         const respons = await fetch('https://todu-backend-lwfp.vercel.app/api/task',{
             method:'POST',
             headers:{"Content-Type":"application/json"},
-            body: JSON.stringify({tasks:data,id})})
+            body: JSON.stringify({tasks:data,id}),
+            mode:'no-cors',
+        })
         if(respons.ok){
             console.log('task send');
             setdata('')
@@ -103,7 +109,8 @@ try {
   async function deleteTask(taskid){
         try {
             const response = await fetch(`https://todu-backend-lwfp.vercel.app/api/usersDelete/${id}/${taskid}`,{
-                method:'DELETE'
+                method:'DELETE',
+                mode:'no-cors',
             })
             if(response.ok){
                 console.log('task Delete');

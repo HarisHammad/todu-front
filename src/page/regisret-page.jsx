@@ -31,7 +31,8 @@ const [data,setdata]= useState({
         const respone = await fetch('https://todu-backend-lwfp.vercel.app/api/register',{
             method:"POST",
             headers:{"Content-Type":"application/json"},
-            body:JSON.stringify(data)
+            body:JSON.stringify(data),
+            mode:'no-cors',
         })
         const res_data = await respone.json();
         console.log(res_data);
